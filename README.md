@@ -1,27 +1,46 @@
-# SeatReservationApp
+# Seat Reservation System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+A simple Angular app that allows users to reserve seats in a train coach. The seat data is stored in local storage.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Book up to 7 seats at a time.
+- Prioritize booking in one row; if unavailable, nearby seats are booked.
+- Seat status displayed: green (available), red (booked).
+- Data persists using browser local storage.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the repo**:
+   ```bash
+   git clone https://github.com/yourusername/seat-reservation-system.git
+   cd seat-reservation-system
+   ```
 
-## Build
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Run the app**:
+   ```bash
+   ng serve
+   ```
 
-## Running unit tests
+4. **Access the app**:
+   Go to `http://localhost:4200/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Database Structure
 
-## Running end-to-end tests
+- **Local Storage Key**: `seats`
+- **Value**: A JSON array of seat objects:
+  ```json
+  [
+    { "seat_number": 1, "isBooked": false },
+    ...
+  ]
+  ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Notes
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Uses Angular standalone components.
