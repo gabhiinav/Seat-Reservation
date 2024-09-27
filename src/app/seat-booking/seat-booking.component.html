@@ -1,0 +1,16 @@
+<div>
+  <label for="numSeats">Enter number of seats to book:</label>
+  <input type="number" id="numSeats" [(ngModel)]="requestedSeats" />
+  <button (click)="bookSeats()">Book Seats</button>
+</div>
+
+<div>
+  <h3>Seat Status:</h3>
+  <div *ngFor="let row of seatRows" style="margin-bottom: 10px;">
+    <span *ngFor="let seat of row" 
+          [ngStyle]="{ 'background-color': seat.isBooked ? 'red' : 'green' }" 
+          style="display: inline-block; width: 30px; height: 30px; text-align: center; margin: 5px;">
+      {{ seat.seat_number }}
+    </span>
+  </div>
+</div>
