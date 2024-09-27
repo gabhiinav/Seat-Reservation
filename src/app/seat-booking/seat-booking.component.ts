@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SeatBookingComponent {
   seatRows: Array<Array<{ seat_number: number; isBooked: boolean }>> = [];
-  requestedSeats: number = 0; // Initialize with a default value
+  requestedSeats: number = 0;
 
   constructor() {
     this.initializeSeats();
